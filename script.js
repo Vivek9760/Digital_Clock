@@ -21,7 +21,11 @@ setInterval(() => {
         }else{
             hour.innerText = hours;
         }
-        document.getElementById('am').checked = true
+        if(hours != 12 ){
+        document.getElementById('am').checked = true}
+        else{
+        document.getElementById('pm').checked = true
+        }
     }
     else{
         hours = hours-12
