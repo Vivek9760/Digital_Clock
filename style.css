@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    color: rgb(228, 240, 240);
+}
+
+#root{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 50px;
+    text-decoration: underline;
+    font-family: cursive;
+}
+
+/* #border{
+    border: 1px dotted rgb(87, 144, 30);
+    border-radius: 20px;
+} */
+
+
+#border2{
+    /* border:1px solid rgb(255, 255, 255);
+    border-radius: 25px; */
+    margin: 15px;
+}
+
+.row{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+}
+
+/* Row 1 */
+
+
+.r1c{
+    display: flex;
+    margin: 10px;
+}
+
+.r1c>p{
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
+#date,#month,#year{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 8px;
+    color: red;
+}
+
+
+/* Row 2 */
+
+#text{
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.r2c{
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#hour,#minute,#second{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    font-size: 25px;
+    padding: 8px;
+    color: red;
+}
+
+.semi{
+    font-weight: 900;
+    padding-left: 8px;
+}
+
+#period{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+#period>div{
+    margin: 3px;
+}
+
+/* Row 3 */
+
+.r3c{
+    display: flex;
+    margin: 10px;
+}
+
+#day{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 20px;
+    color: red;
+}
+
+.r3c>p{
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
+input[type='radio']{
+    accent-color: red;
+}

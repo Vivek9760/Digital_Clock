@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="root">
+
+        <h1>Digital Clock</h1>
+
+        <div id="border">
+
+            <div id="border2">
+
+<!-- Row 1 -->
+                <div class="row">
+
+                    <div class="r1c">
+                        <p id="date">__</p>
+                        <p>Date</p>
+                    </div>
+
+                    <div class="r1c">
+                        <p id="month">__</p>
+                        <p>Month</p>
+                    </div>
+
+                    <div class="r1c">
+                        <p id="year">__</p>
+                        <p>Year</p>
+                    </div>
+
+                </div>
+
+<!-- Row 2 -->
+                <div class="row">
+                    <p id="text">Time</p>
+
+                    <div class="r2c">
+                        <p id="hour">__</p>
+                    </div>
+
+                    <p class="semi">:</p>
+
+                    <div class="r2c">
+                        <p id="minute">__</p>
+                    </div>
+
+                    <p class="semi">:</p>
+
+                    <div class="r2c">
+                        <p id="second">__</p>
+                    </div>
+
+                    <div id="period">
+                        <div>
+                            <input type="radio" name="Time" id="pm">
+                            <label for="">PM</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="Time" id="am">
+                            <label for="">AM</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="r3c">
+                        <p id="day">___</p>
+                        <p>DAY</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
