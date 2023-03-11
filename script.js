@@ -8,7 +8,7 @@ let date = document.getElementById('date');
 let hour = document.getElementById("hour");
 let minute = document.getElementById("minute");
 let second = document.getElementById("second");
-let period = document.getElementById('period');
+let period = document.getElementById('apm');
 
 let day = document.getElementById('day');
 let weekday = ['SUN','MON','TUE','WED','THU','FRI','SAT']
@@ -24,9 +24,9 @@ setInterval(() => {
             hour.innerText = hours;
         }
         if(hours != 12 ){
-        period.innerHTML="<p>AM</p>"}
+        period.innerText= "AM"; }
         else{
-            period.innerHTML="<p>PM</p>"
+            period.innerText= "PM";
         }
     }
     else{
@@ -37,9 +37,9 @@ setInterval(() => {
             hour.innerText = hours;
         }
         if(hours != 12 ){
-            period.innerHTML="<p>PM</p>"}
+            period.innerText="PM"}
             else{
-        period.innerHTML="<p>AM</p>"}
+        period.innerText="AM"}
     }
 
     let minutes = x.getMinutes();
@@ -73,7 +73,6 @@ setInterval(()=>{
     let arr =document.querySelectorAll('.semi')
     if(count===true){
        arr.forEach((i) => {
-            console.log(i)
             i.style.visibility = 'hidden' 
         });
         count=false;
