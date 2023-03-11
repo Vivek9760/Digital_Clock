@@ -88,15 +88,12 @@ h1{
 }
 
 #period{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 25px;
     margin-left: 5px;
+    color: rgb(223, 105, 105);
+    text-shadow: 2px 2px 3px rgb(241, 12, 12);
 }
 
-#period>div{
-    margin: 3px;
-}
 
 /* Row 3 */
 

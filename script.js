@@ -8,6 +8,7 @@ let date = document.getElementById('date');
 let hour = document.getElementById("hour");
 let minute = document.getElementById("minute");
 let second = document.getElementById("second");
+let period = document.getElementById('period');
 
 let day = document.getElementById('day');
 let weekday = ['SUN','MON','TUE','WED','THU','FRI','SAT']
@@ -23,9 +24,9 @@ setInterval(() => {
             hour.innerText = hours;
         }
         if(hours != 12 ){
-        document.getElementById('am').checked = true}
+        period.innerHTML="<p>AM</p>"}
         else{
-        document.getElementById('pm').checked = true
+            period.innerHTML="<p>PM</p>"
         }
     }
     else{
@@ -35,7 +36,10 @@ setInterval(() => {
         }else{
             hour.innerText = hours;
         }
-        document.getElementById('pm').checked = true
+        if(hours != 12 ){
+            period.innerHTML="<p>PM</p>"}
+            else{
+        period.innerHTML="<p>AM</p>"}
     }
 
     let minutes = x.getMinutes();
