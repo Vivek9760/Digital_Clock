@@ -1,5 +1,6 @@
 function Clock() {
 
+let count = false;
 let month = document.getElementById('month');
 let year = document.getElementById('year');
 let date = document.getElementById('date');
@@ -63,6 +64,23 @@ setInterval(() => {
 
 
 }, 1000);
+
+setInterval(()=>{
+    let arr =document.querySelectorAll('.semi')
+    if(count===true){
+       arr.forEach((i) => {
+            console.log(i)
+            i.style.visibility = 'hidden' 
+        });
+        count=false;
+    }else{
+        arr.forEach((i) => {
+            i.style.visibility = 'visible'; 
+        });
+        count=true;
+    }
+
+},500)
 }
 
 Clock();

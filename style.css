@@ -82,7 +82,9 @@ h1{
 
 .semi{
     font-weight: 900;
+    font-size: 25px ;
     padding-left: 8px;
+    color: red;
 }
 
 #period{
