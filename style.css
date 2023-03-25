@@ -1,10 +1,10 @@
 body{
     margin: 0;
     color: rgb(228, 240, 240);
+    background-color: black;
 }
 
 #root{
-    background-color: black;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -125,6 +125,7 @@ input[type='radio']{
 }
 #row1_1{
     border: 2px solid red;
+    border-radius: 5px;
     display: inline-block;
     padding: 10px;
 
@@ -133,9 +134,15 @@ input[type='radio']{
 #time{
     background-color: rgb(87, 81, 81);
     color: rgb(228, 84, 84);
-    margin: 10px;
+    margin: 10px;    
+    box-shadow: 2px 2px 3px rgb(171, 119, 119);
 }
+
 #btn1,#btn2{
     margin: 5px;
-
-}
+    background-color: rgb(115, 115, 115);
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    box-shadow: 2px 2px 3px rgb(254, 244, 244);
+    }
