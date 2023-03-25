@@ -12,25 +12,31 @@ let period = document.getElementById('apm');
 
 let day = document.getElementById('day');
 let weekday = ['SUN','MON','TUE','WED','THU','FRI','SAT']
-
+let minutes;
+let hours;
 setInterval(() => {
     x = new Date();
 
     hours = x.getHours();
-    if(hours <= 12){
+
+    if(hours == 0){
+        hour.innerText = 12;
+        period.innerText= "AM";
+    }
+    else if(hours <= 12){
         if(hours < 10){
             hour.innerText = `0${hours}`
         }else{
             hour.innerText = hours;
         }
         if(hours != 12 ){
-        period.innerText= "AM"; }
-        else{
-            period.innerText= "PM";
+            period.innerText= "AM"; }
+            else{
+                period.innerText= "PM";
+            }
         }
-    }
-    else{
-        hours = hours-12
+        else{
+            hours = hours-12
         if(hours < 10){
             hour.innerText = `0${hours}`
         }else{
@@ -42,7 +48,7 @@ setInterval(() => {
         period.innerText="AM"}
     }
 
-    let minutes = x.getMinutes();
+    minutes = x.getMinutes();
     if(minutes<10){
         minute.innerText = `0${minutes}`;
     }else{
@@ -83,7 +89,39 @@ setInterval(()=>{
         count=true;
     }
 
-},500)
+},500);
+
+let audio = new Audio('./Alarm_Tone.mp3');
+
+document.querySelector('#btn1').addEventListener('click',()=>{
+    
+    let totalTime = 0
+    let alarm = document.querySelector('#time').value;
+    alarm = alarm.split(':');
+    alarm.forEach((i,index)=>{
+        alarm[index]=Number(i)
+    })
+    
+
+    let y = setInterval(()=>{
+        if(alarm[0]==hours && alarm[1]==minutes){
+             audio.play();
+             setTimeout(()=>{
+                audio.pause();
+             },60000)
+             clearInterval(y);
+            }
+      
+    },1000)
+
+    document.querySelector('#btn2').addEventListener('click',()=>{
+        clearInterval(y);
+        document.querySelector('#time').value ="";
+        audio.pause();
+
+    })
+
+})
 }
 
 Clock();

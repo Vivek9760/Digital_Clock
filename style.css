@@ -118,3 +118,24 @@ h1{
 input[type='radio']{
     accent-color: red;
 }
+
+.row1{
+    margin-top: 50px;
+    text-align: center;
+}
+#row1_1{
+    border: 2px solid red;
+    display: inline-block;
+    padding: 10px;
+
+}
+
+#time{
+    background-color: rgb(87, 81, 81);
+    color: rgb(228, 84, 84);
+    margin: 10px;
+}
+#btn1,#btn2{
+    margin: 5px;
+
+}
